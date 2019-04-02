@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class ExpenseManager {
     JFrame frame ;
@@ -15,6 +16,7 @@ public class ExpenseManager {
         b.setBounds(50,150,200,30);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setLayout(null);
+        frame.getContentPane().setBackground(Color.darkGray);
         frame.setSize(300,300);
         frame.setVisible(true);
     }
