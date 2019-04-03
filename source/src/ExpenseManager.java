@@ -10,7 +10,6 @@ public class ExpenseManager {
         JTextField t2 = new JTextField("");
         JButton b = new JButton("SUBMIT");
         frame.add(l1);
-        //l1.setOpaque(true);
         l1.setForeground(Color.WHITE);
         l1.setBounds(50,25,500,20);
         frame.add(t1);
