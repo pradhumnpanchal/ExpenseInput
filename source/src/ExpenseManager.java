@@ -5,9 +5,14 @@ public class ExpenseManager {
     JFrame frame ;
     void go(){
         frame = new JFrame("Daily Expenses");
+        JLabel l1 = new JLabel("Amount");
         JTextField t1 = new JTextField("");
         JTextField t2 = new JTextField("");
         JButton b = new JButton("SUBMIT");
+        frame.add(l1);
+        //l1.setOpaque(true);
+        l1.setForeground(Color.WHITE);
+        l1.setBounds(50,25,500,20);
         frame.add(t1);
         t1.setBounds(50,50,200,30);
         frame.add(t2);
