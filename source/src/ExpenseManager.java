@@ -5,6 +5,7 @@ public class ExpenseManager {
     JFrame frame ;
     void go(){
         frame = new JFrame("Daily Expenses");
+        JLabel l = new JLabel("DAILY KA NATAK");
         JLabel l1 = new JLabel("Amount");
         JLabel l2 = new JLabel("Description");
         JTextField t1 = new JTextField("");
@@ -12,6 +13,9 @@ public class ExpenseManager {
         JButton b = new JButton("SUBMIT");
         frame.add(l1);
         frame.add(l2);
+        frame.add(l);
+        l.setForeground(Color.WHITE);
+        l.setBounds(100,2,500,30);
         l1.setForeground(Color.WHITE);
         l1.setBounds(50,30,500,20);
         l2.setForeground(Color.WHITE);
