@@ -45,8 +45,10 @@ public class ExpenseManager implements ActionListener {
             Connection con= DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/try","root","root");
             Statement stmt=con.createStatement();
-
-            ResultSet rs=stmt.executeQuery("SELECT * FROM data");
+            String x = t1.getText();
+            int x1 = Integer.parseInt(x);
+            String y = t2.getText();
+            ResultSet rs=stmt.executeQuery("INSERT INTO data (amt, dis) VALUES (x1,y) ");
             con.close();
         }catch(Exception e){ System.out.println(e);}
     }
