@@ -1,15 +1,21 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
-public class ExpenseManager {
+public class ExpenseManager implements ActionListener {
     JFrame frame ;
+    JTextField t1 = new JTextField("");
+    JTextField t2 = new JTextField("");
     void go(){
         frame = new JFrame("Daily Expenses");
         JLabel l = new JLabel("DAILY KA NATAK");
         JLabel l1 = new JLabel("Amount");
         JLabel l2 = new JLabel("Description");
-        JTextField t1 = new JTextField("");
-        JTextField t2 = new JTextField("");
         JButton b = new JButton("SUBMIT");
         frame.add(l1);
         frame.add(l2);
@@ -26,11 +32,23 @@ public class ExpenseManager {
         t2.setBounds(50,100,200,30);
         frame.add(b);
         b.setBounds(50,150,200,30);
+        b.addActionListener(this);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setLayout(null);
         frame.getContentPane().setBackground(Color.darkGray);
         frame.setSize(300,300);
         frame.setVisible(true);
+    }
+    public void actionPerformed(ActionEvent e){
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con= DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/try","root","root");
+            Statement stmt=con.createStatement();
+
+            ResultSet rs=stmt.executeQuery("SELECT * FROM data");
+            con.close();
+        }catch(Exception e){ System.out.println(e);}
     }
 
     public static void main(String[] args) {
