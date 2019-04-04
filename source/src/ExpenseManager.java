@@ -50,7 +50,7 @@ public class ExpenseManager implements ActionListener {
             String y = t2.getText();
             ResultSet rs=stmt.executeQuery("INSERT INTO data (amt, dis) VALUES (x1,y) ");
             con.close();
-        }catch(Exception e){ System.out.println(e);}
+        }catch(Exception eX){ System.out.println(e);}
     }
 
     public static void main(String[] args) {
