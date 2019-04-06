@@ -49,9 +49,7 @@ public class ExpenseManager implements ActionListener {
             String x = t1.getText();
             int x1 = Integer.parseInt(x);
             String y = t2.getText();
-//            int x1 = 3;
-//            String y = "frf";
-            stmt.executeUpdate("INSERT INTO data (amt, dis) VALUES (x1 ,y)");
+            stmt.executeUpdate("INSERT INTO data (amt, dis)"+" VALUES ('"+x1+"' ,'"+y+"');");
             con.close();
             stmt.close();
         }catch(Exception eX){ System.out.println(e);}
