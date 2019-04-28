@@ -11,7 +11,9 @@ public class ExpenseManager implements ActionListener {
     JFrame frame ;
     JTextField t1 = new JTextField("");
     JTextField t2 = new JTextField("");
+    
     void go(){
+        
         frame = new JFrame("Daily Expenses");
         JLabel l = new JLabel("DAILY KA NATAK");
         JLabel l1 = new JLabel("Amount");
@@ -64,7 +66,9 @@ public class ExpenseManager implements ActionListener {
     }
 
     public static void main(String[] args) {
+        
         ExpenseManager e = new ExpenseManager();
         e.go();
+        
     }
 }
