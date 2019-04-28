@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class ExpenseManager implements ActionListener {
+    
     JFrame frame ;
     JTextField t1 = new JTextField("");
     JTextField t2 = new JTextField("");
