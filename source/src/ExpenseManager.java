@@ -16,6 +16,7 @@ public class ExpenseManager implements ActionListener {
     void go(){
         
         frame = new JFrame("Daily Expenses");
+        
         JLabel l = new JLabel("DAILY KA NATAK");
         JLabel l1 = new JLabel("Amount");
         JLabel l2 = new JLabel("Description");
