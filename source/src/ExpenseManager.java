@@ -42,7 +42,9 @@ public class ExpenseManager implements ActionListener {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con= DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/try","root","root");
+
             //Statement stmt=con.createStatement();
+
             String sql = "INSERT INTO data (amt, dis) VALUES(?,?)";
             String x = t1.getText();
             int x1 = Integer.parseInt(x);
@@ -51,10 +53,9 @@ public class ExpenseManager implements ActionListener {
             pstmt.setInt(1, x1);
             pstmt.setString(2, y);
             pstmt.executeUpdate();
-//            String x = t1.getText();
-//            int x1 = Integer.parseInt(x);
-//            String y = t2.getText();
+
 //            stmt.executeUpdate("INSERT INTO data (amt, dis)"+" VALUES ('"+x1+"' ,'"+y+"');");
+
             con.close();
             pstmt.close();
         }catch(Exception eX){ System.out.println(e);}
