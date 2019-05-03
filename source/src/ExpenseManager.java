@@ -45,10 +45,8 @@ public class ExpenseManager implements ActionListener {
             //Statement stmt=con.createStatement();
             String sql = "INSERT INTO data (amt, dis) VALUES(?,?)";
             String x = t1.getText();
-            //int x1 = Integer.parseInt(x);
-            //String y = t2.getText();
-            int x1 = 11;
-            String y = "fuck";
+            int x1 = Integer.parseInt(x);
+            String y = t2.getText();
             PreparedStatement pstmt = con.prepareStatement(sql);
             pstmt.setInt(1, x1);
             pstmt.setString(2, y);
