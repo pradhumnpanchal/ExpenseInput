@@ -20,7 +20,6 @@ public class ExpenseManager implements ActionListener {
         JLabel l1 = new JLabel("Amount");
         JLabel l2 = new JLabel("Description");
 
-
         frame.add(l1);
         frame.add(l2);
         frame.add(l);
