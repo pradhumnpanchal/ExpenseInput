@@ -10,6 +10,7 @@ public class ExpenseManager implements ActionListener {
 
     JTextField t1 = new JTextField("");
     JTextField t2 = new JTextField("");
+    JButton b = new JButton("SUBMIT");
 
     void go(){
 
@@ -18,7 +19,7 @@ public class ExpenseManager implements ActionListener {
         JLabel l = new JLabel("DAILY KA NATAK");
         JLabel l1 = new JLabel("Amount");
         JLabel l2 = new JLabel("Description");
-        JButton b = new JButton("SUBMIT");
+
 
         frame.add(l1);
         frame.add(l2);
@@ -63,7 +64,6 @@ public class ExpenseManager implements ActionListener {
             String x = t1.getText();
             int x1 = Integer.parseInt(x);
             String y = t2.getText();
-
             PreparedStatement pstmt = con.prepareStatement(sql);
             pstmt.setInt(1, x1);
             pstmt.setString(2, y);
