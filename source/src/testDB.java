@@ -8,15 +8,13 @@ public class testDB {
             Class.forName("com.mysql.jdbc.Driver");
             Connection con= DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/try","root","root");
-
             //Statement stmt=con.createStatement();
-
             String sql = "INSERT INTO data (amt, dis) VALUES(?,?)";
             //String x = t1.getText();
-            int x1 = 12;
+            String x1 = "1";
             String y = "try";
             PreparedStatement pstmt = con.prepareStatement(sql);
-            pstmt.setInt(1, x1);
+            pstmt.setString(1, x1);
             pstmt.setString(2, y);
             pstmt.executeUpdate();
 
