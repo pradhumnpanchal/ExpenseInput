@@ -9,7 +9,7 @@ public class testDB {
             Connection con= DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/try","root","root");
             //Statement stmt=con.createStatement();
-            String sql = "INSERT INTO data (amt, dis) VALUES(?,?)";
+            String sql = "insert into data (amt, dis)"+" values(?,?)";
             //String x = t1.getText();
             int x1 = 1;
             String y = "try";
