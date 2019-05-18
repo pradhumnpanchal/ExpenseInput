@@ -11,17 +11,17 @@ public class testDB {
             //Statement stmt=con.createStatement();
             String sql = "INSERT INTO data (amt, dis) VALUES(?,?)";
             //String x = t1.getText();
-            String x1 = "1";
+            int x1 = 1;
             String y = "try";
             PreparedStatement pstmt = con.prepareStatement(sql);
-            pstmt.setString(1, x1);
+            pstmt.setInt(1, x1);
             pstmt.setString(2, y);
-            pstmt.executeUpdate();
+            pstmt.execute();
 
 //           stmt.executeUpdate("INSERT INTO data (amt, dis)"+" VALUES ('"+x1+"' ,'"+y+"');");
-
+            //pstmt.close();
             con.close();
-            pstmt.close();
+
 
         }catch(Exception eX){ System.out.println("fuck");}
     }
