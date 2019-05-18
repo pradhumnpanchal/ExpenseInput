@@ -66,7 +66,7 @@ public class ExpenseManager implements ActionListener {
             PreparedStatement pstmt = con.prepareStatement(sql);
             pstmt.setInt(1, x1);
             pstmt.setString(2, y);
-            pstmt.executeUpdate();
+            pstmt.execute();
 
 //            stmt.executeUpdate("INSERT INTO data (amt, dis)"+" VALUES ('"+x1+"' ,'"+y+"');");
 
